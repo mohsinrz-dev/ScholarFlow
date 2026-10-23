@@ -57,6 +57,19 @@ npm run dev
 
 App opens at `http://localhost:5173`.
 
+## Deploy to GitHub Pages
+
+The repository deploys the frontend from the `main` branch using GitHub Actions.
+The production build uses `/ScholarFlow/` as its asset base and hash-based
+routes, so assets and app routes work from the repository's Pages URL without a
+separately deployed backend.
+
+The landing page is available at
+`https://mohsinrz-dev.github.io/ScholarFlow/`. Sign-in and data features require
+a separately hosted backend and Supabase project. Set `VITE_API_BASE_URL`,
+`VITE_SUPABASE_URL`, and `VITE_SUPABASE_ANON_KEY` as repository Actions
+variables before building to connect those services.
+
 ### 4. Build for production
 
 ```bash
